@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="screen" id="welcome-screen">
+            <h1>Welcome to our Interactive Survey!</h1>
+            <p>This survey will ask you various questions using different interactive methods.</p>
+            <button class="btn" onclick="startSurvey()">Start Survey</button>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="screen" id="question-screen" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="question-container">
+                <img id="question-image" src="" alt="Question Image">
+                <div id="question-text"></div>
+                <div id="answer-container"></div>
+            </div>
+            <div class="navigation">
+                <button class="btn" onclick="previousQuestion()" id="prev-btn">Previous</button>
+                <button class="btn" onclick="nextQuestion()" id="next-btn" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen" id="results-screen" style="display: none;">
+            <h2>Survey Results</h2>
+            <div id="results-container"></div>
+            <button class="btn" onclick="downloadResults()">Download Results</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
