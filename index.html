@@ -10,9 +10,12 @@
     <div class="container">
         <!-- Welcome Screen -->
         <div class="screen" id="welcome-screen">
-            <h1>Welcome to our Interactive Survey!</h1>
-            <p>This survey will ask you various questions using different interactive methods.</p>
-            <button class="btn" onclick="startSurvey()">Start Survey</button>
+            <div class="welcome-content">
+                <h1>Welcome to our Interactive Survey!</h1>
+                <p>This survey will ask you various questions using different interactive methods.</p>
+                <button class="btn" onclick="startSurvey()">Start Survey</button>
+            </div>
+            <img id="welcome-image" src="https://picsum.photos/800/400?random=0" alt="Welcome Image" class="welcome-image">
         </div>
 
         <!-- Question Screen -->
@@ -35,7 +38,10 @@
         <div class="screen" id="results-screen" style="display: none;">
             <h2>Survey Results</h2>
             <div id="results-container"></div>
-            <button class="btn" onclick="downloadResults()">Download Results</button>
+            <div class="results-actions">
+                <button class="btn" onclick="downloadResults()">Download Results</button>
+                <button class="btn" onclick="goToStart()">Go to Start</button>
+            </div>
         </div>
     </div>
 
